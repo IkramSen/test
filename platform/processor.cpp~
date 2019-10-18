@@ -1,0 +1,45 @@
+#include "processor.hpp"
+#include <cmath>
+#include <map>
+
+#include <algorithm>  
+
+#define EXACT_PREEMP  0
+#define APROX_PREEMP  1
+#define EXACT_NPEEMP  2
+
+
+using namespace std;
+
+namespace processor {
+
+  processor::processor(int id, int TAG){
+
+    this->id = id;
+    this->TAG = TAG;
+  }
+
+
+  processor::~processor(){
+    // do not forget to destroy the malloc of the grap table !!
+    // do not forget to destroy all the conc and sep.
+  }
+ int processor::_id(){
+    return id;
+  }
+  
+  void  processor::_id(int id){
+    this->id = id;
+  }
+
+ 
+  int processor::_TAG(){
+    return TAG;
+  }
+  
+  void  processor::_TAG(int TAG){
+    this->TAG = TAG;
+  }
+
+}
+
